@@ -1,0 +1,29 @@
+/* .MuiAppBar-root{
+    background-color:#000;
+    border: 2px solid yellowgreen;
+    display: flex;
+    justify-content: center;
+} */
+
+.navbar{
+    width: 100%;
+    background-color:#000;
+    /* border: 2px solid yellowgreen; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar__mobile-links{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 10px;
+    align-items: center;
+}
+.navbar__link{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}

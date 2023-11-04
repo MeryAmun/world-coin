@@ -1,0 +1,19 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home__section-two,
+.home__section-three,
+.home__section-four,
+.home__section-five,
+.home__section-six,
+.home__section-seven,
+.home__section-one{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
