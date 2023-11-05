@@ -1,11 +1,16 @@
 .app{
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content:space-between;
-  gap: 30px;
   align-items: center;
-  /* border: 2px solid yellowgreen; */
+
   min-height: 100vh;
   
+  
+}
+
+
+@media screen and (max-width:570px){
   
 }

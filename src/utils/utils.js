@@ -14,13 +14,13 @@ export const  navbarLinkItems = [
 ]
 export const footerLinkItems = [
     {
-    name:"HOME", path:"/"
+    name:"Home", path:"/"
     },
     {
-    name:"BUILD", path:"/build"
+    name:"Privacy", path:"/privacy"
     },
     {
-    name:"ABOUT", path:"/about"
+    name:"orb Operations", path:"/orb-operations"
     },
     {
     name:"WHITEPAPER", path:"/whitepaper"

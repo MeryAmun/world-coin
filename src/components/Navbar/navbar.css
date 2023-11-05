@@ -8,22 +8,51 @@
 .navbar{
     width: 100%;
     background-color:#000;
-    /* border: 2px solid yellowgreen; */
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: #fff;
+    padding: 5px 0;
 }
-
+.navbar__logo{
+    margin-left: -100px;
+}
 .navbar__mobile-links{
     display: flex;
     flex-direction: column;
     justify-content:center;
     gap: 10px;
     align-items: center;
+   
 }
 .navbar__link{
     color: #fff;
     text-decoration: none;
     margin-left: 10px;
+}
+
+@media screen and (max-width:570px){
+.navbar__logo-desktop{
+    display: none;
+}
+.navbar{
+    padding: 0;
+}   
+.navbar__logo{
+    margin-left: -50px;
+}   
+.navbar__logo-box{
+    margin-left: 0px;
+}   
+
+.navbar__link{
+    width: 50px;
+    height: 50px;
+   
+}
+.navbar__link img{
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
 }
