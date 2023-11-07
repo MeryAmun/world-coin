@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import './navbar.css'
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import "./navbar.css";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 //import { StyledEngineProvider } from '@mui/material/styles';
-import { navbarLinkItems } from '../../utils/utils';
-import { logo } from '../../assets';
+import { navbarLinkItems } from "../../utils/utils";
+import { logo } from "../../assets";
 
 const drawerWidth = 240;
 const Navbar = (props) => {
@@ -22,19 +22,20 @@ const Navbar = (props) => {
     setMobileOpen((prevState) => !prevState);
   };
 
-
-
   const drawer = (
-    <div onClick={handleDrawerToggle} style={{ textAlign: 'center',backgroundColor:"#000", height:"100%", paddingTop:"10px"}}>
+    <div
+      onClick={handleDrawerToggle}
+      className="navbar__mobile-screen"
+    >
       <div className="navbar__logo-box">
-        <Link to='/' className='navbar__link'>
-        <img src={logo} alt="" />
+        <Link to="/" className="">
+          <img src={logo} alt="" />
         </Link>
       </div>
       <Divider />
-      <div className='navbar__mobile-links'>
+      <div className="navbar__mobile-links">
         {navbarLinkItems.map((item) => (
-          <Link to={item.path} key={item} className='navbar__link'>
+          <Link to={item.path} key={item.name} className="navbar__link">
             {item.name}
           </Link>
         ))}
@@ -42,32 +43,39 @@ const Navbar = (props) => {
     </div>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
   return (
     // <StyledEngineProvider injectFirst>
-     <div style={{width:"100%"}}>
-       <CssBaseline />
+    <div style={{ width: "100%" }}>
+      <CssBaseline />
       <div component="nav" className="navbar">
         <div className="navbar__logo">
-        <IconButton
+          <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
           <div className="navbar__logo-desktop">
-       <Link to='/' className='navbar__link'>
-       <img src={logo} alt="" />
-       </Link>
-      </div>
+            <Link to="/" className="navbar__link">
+              <img src={logo} alt="" />
+            </Link>
+          </div>
         </div>
-        <Toolbar>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navbarLinkItems.map((item) => (
-              <Link to={item.path} key={item} className="navbar__link">
+        <Toolbar sx={{ marginRight: "-200px" }}>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "block" },
+              width: "100%",
+              marginRight: "0px",
+            }}
+          >
+            {navbarLinkItems.map((item, index) => (
+              <Link to={item.path} key={index} className="navbar__link">
                 {item.name}
               </Link>
             ))}
@@ -84,16 +92,19 @@ const Navbar = (props) => {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, },
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
         >
           {drawer}
         </Drawer>
       </nav>
-      </div>
-      // </StyledEngineProvider>
-  )
-}
+    </div>
+    // </StyledEngineProvider>
+  );
+};
 
-export default Navbar
+export default Navbar;

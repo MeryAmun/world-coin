@@ -1,15 +1,15 @@
 export const  navbarLinkItems = [
     {
-    name:"HOME", path:"/"
+    name:"Home", path:"/"
     },
     {
-    name:"BUILD", path:"/build"
+    name:"Builds", path:"/builds"
     },
     {
-    name:"ABOUT", path:"/about"
+    name:"About", path:"/about"
     },
     {
-    name:"WHITEPAPER", path:"/whitepaper"
+    name:"Whitepaper", path:"/whitepaper"
     },
 ]
 export const footerLinkItems = [

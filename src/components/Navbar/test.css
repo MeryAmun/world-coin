@@ -4,17 +4,7 @@
     display: flex;
     justify-content: center;
 } */
-.navbar__mobile-screen{
-    /* text-align: center; */
-    background-color: #000;
-    height: 100%;
-}
-.navbar__mobile-links{
-    /* text-align: center; */
-    background-color: #000;
-    padding-top: 10px;
 
-}
 .navbar{
     width: 100%;
     background-color:#000;
@@ -39,11 +29,21 @@
    
 }
 .navbar__link{
-    color: #fff;
-    text-decoration: none;
-    margin-left: 50px;
+    
+    /* margin-left: 50px; */
+}
+.navbar__mobile-links{
+    /* text-align: center; */
+    background-color: #000;
+    padding-top: 10px;
+
 }
 
+.navbar__mobile-screen{
+    /* text-align: center; */
+    background-color: #000;
+    height: 100%;
+}
 @media screen and (max-width:570px){
 .navbar__logo-desktop{
     display: none;
@@ -66,8 +66,9 @@
     text-align: center;
     color: #fff;
     text-decoration: none;
-    width: 100%;  
-    margin-left: 0;   
+    width: 100%;
+    
+   
 }
 .navbar__link img{
     width: auto;
